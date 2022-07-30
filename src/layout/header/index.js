@@ -96,9 +96,13 @@ const Header = () => {
                             }}
                         >
                             {routes.map((page) => (
+                                page.show ?
                                 <MenuItem key={page.name} onClick={handleCloseNavMenu}>
-                                    <Typography textAlign="center">{page.name}</Typography>
+                                    <Button href={page.path} >
+                                        {page.name}
+                                    </Button>
                                 </MenuItem>
+                                : null
                             ))}
                         </Menu>
                     </Box>
@@ -126,6 +130,7 @@ const Header = () => {
                     {/* desktop links  */}
                     <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
                         {routes.map((page) => (
+                            page.show ?
                             <Button
                                 key={page.name}
                                 onClick={handleCloseNavMenu}
@@ -134,6 +139,7 @@ const Header = () => {
                             >
                                 {page.name}
                             </Button>
+                            : null
                         ))}
                     </Box>
 
