@@ -1,11 +1,14 @@
+import { makeStyles } from '@mui/styles';
 
-export const styles = {
+const Style = makeStyles(theme => ({
     root: {
-        padding: "0"
+        display: 'flex',
+        alignItems: 'center',
+        justifyContent: 'center'
     },
     h1: {
-        background: "linear-gradient(45deg, green 30%, orange 90%)",
-        color: "white",
-        margin: 0
+        background: 'linear-gradient(45deg, green 30%, orange 90%)',
     }
-};
+}));
+
+export default Style;

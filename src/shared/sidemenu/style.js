@@ -6,8 +6,8 @@ const Style = makeStyles(theme => ({
         alignItems: 'center',
         justifyContent: 'center'
     },
-    h1: {
-        background: 'linear-gradient(45deg, green 30%, orange 90%)',
+    highlight: {
+        backgroundColor: 'red',
     }
 }));
 

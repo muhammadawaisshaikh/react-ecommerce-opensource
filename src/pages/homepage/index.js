@@ -1,10 +1,12 @@
 import React from 'react';
-import { styles } from './style';
+import Style from './style';
 
 function Homepage() {
+  const classes = Style();
+
   return (
     <div>
-        <h1 style={styles.h1}>Homepage</h1>
+        <h1 className={classes.h1}>Homepage</h1>
     </div>
   );
 }
