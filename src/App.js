@@ -7,7 +7,10 @@ function App() {
   return (
     <div>
       <Header />
-      <RouterProvider />
+      
+      <div style={{paddingTop: '2rem'}}>
+        <RouterProvider />
+      </div>
     </div>
   );
 }
