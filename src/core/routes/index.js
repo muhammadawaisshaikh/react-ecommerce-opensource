@@ -6,16 +6,20 @@ export const routes = [
     {
         path: '/',
         name: "Side Menu",
-        component: <SideMenu />
+        component: <SideMenu />,
+        icon: 'home'
     },
     {
         path: '/homepage',
         name: "Home",
-        component: <Homepage />
+        component: <Homepage />,
+        icon: 'home'
+        
     },
     {
         path: '/products',
         name: "Products",
-        component: <Products />
+        component: <Products />,
+        icon: 'list'
     }
 ]

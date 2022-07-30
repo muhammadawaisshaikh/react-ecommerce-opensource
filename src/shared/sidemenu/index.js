@@ -1,6 +1,7 @@
 import * as React from 'react';
 import Style from './style';
 import { routes } from '../../core/routes';
+import IconResolver from '../../core/resolvers/iconResolver';
 
 import Box from '@mui/material/Box';
 import Drawer from '@mui/material/Drawer';
@@ -11,7 +12,6 @@ import ListItemIcon from '@mui/material/ListItemIcon';
 import ListItemText from '@mui/material/ListItemText';
 import { IconButton } from '@mui/material';
 import MenuIcon from '@mui/icons-material/Menu';
-import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
 
 function SideMenu() {
   const classes = Style();
@@ -41,7 +41,7 @@ function SideMenu() {
           <ListItem key={index} disablePadding>
             <ListItemButton>
               <ListItemIcon>
-                <ShoppingCartIcon />
+                {IconResolver(route.icon)}
               </ListItemIcon>
               <ListItemText primary={route.name} />
             </ListItemButton>
