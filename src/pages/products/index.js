@@ -6,7 +6,7 @@ function Products() {
 
   return (
     <div>
-        <h1 className={classes.h1}>Homepage</h1>
+        <h1 className={classes.h1}>Products</h1>
     </div>
   );
 }

@@ -1,4 +1,4 @@
-import { Dashboard, Home, List, Menu, ShoppingCart } from "@mui/icons-material";
+import { Dashboard, Home, List, Menu, ShoppingCart, Adb} from "@mui/icons-material";
 
 function IconResolver(name) {
 
@@ -9,7 +9,8 @@ function IconResolver(name) {
         menu: Menu,
         cart: ShoppingCart,
         home: Home,
-        list: List
+        list: List,
+        adb: Adb
     }
 
     // checking if icon which is invoked from a file is available in resolver or not 
