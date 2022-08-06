@@ -13,8 +13,8 @@ function Products() {
       <Container maxWidth="xl">
         <Grid container spacing={4}>
           {data.map((item, i) => 
-            <Grid item xs={12} md={3}>
-              <ProductCard key={i} data={item} />
+            <Grid item xs={12} md={3} key={i}>
+              <ProductCard data={item} />
             </Grid>
           )}
         </Grid>
