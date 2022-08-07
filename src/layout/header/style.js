@@ -11,6 +11,14 @@ const Style = makeStyles(theme => ({
     },
     avatar: {
         backgroundColor: '#135ca3 !important'
+    },
+    bgDark: {
+        backgroundColor: '#212121 !important',
+        color: '#ffffff !important'
+    },
+    bgLight: {
+        backgroundColor: '#ffffff !important',
+        color: '#212121 !important'
     }
 }));
 

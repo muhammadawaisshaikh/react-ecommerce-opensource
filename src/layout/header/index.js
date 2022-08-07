@@ -1,7 +1,10 @@
-import * as React from 'react';
+import React, { useContext, useState } from 'react';
 import Style from './style';
 import { routes } from '../../core/routes';
 import IconResolver from '../../core/resolvers/iconResolver';
+
+import { ThemeContext } from '../../contexts/ThemeContext';
+import SwitchButton from './switchButton';
 
 import AppBar from '@mui/material/AppBar';
 import Box from '@mui/material/Box';
@@ -19,8 +22,12 @@ const settings = ['Profile', 'Account', 'Dashboard', 'Logout'];
 
 const Header = () => {
     const classes = Style();
-    const [anchorElNav, setAnchorElNav] = React.useState(null);
-    const [anchorElUser, setAnchorElUser] = React.useState(null);
+
+    const theme = useContext(ThemeContext);
+    const darkMode = theme.state.darkMode;
+
+    const [anchorElNav, setAnchorElNav] = useState(null);
+    const [anchorElUser, setAnchorElUser] = useState(null);
 
     const handleOpenNavMenu = (event) => {
         setAnchorElNav(event.currentTarget);
@@ -38,8 +45,10 @@ const Header = () => {
         setAnchorElUser(null);
     };
 
+    console.log(darkMode);
+
     return (
-        <AppBar position="static">
+        <AppBar position="static" className={`${darkMode ? classes.bgDark : classes.bgLight}`}>
             <Container maxWidth="xl">
                 <Toolbar disableGutters>
                     {/* desktop menu  */}
@@ -133,8 +142,9 @@ const Header = () => {
                             <Button
                                 key={page.name}
                                 onClick={handleCloseNavMenu}
-                                sx={{ my: 2, color: 'white', display: 'block' }}
+                                sx={{ my: 2, mx: 0.5 }}
                                 href={page.path}
+                                className={`${darkMode ? classes.bgDark : classes.bgLight}`}
                             >
                                 {page.name}
                             </Button>
@@ -172,6 +182,8 @@ const Header = () => {
                             ))}
                         </Menu>
                     </Box>
+
+                    <SwitchButton />
                 </Toolbar>
             </Container>
         </AppBar>
